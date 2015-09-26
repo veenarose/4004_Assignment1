@@ -8,6 +8,9 @@ public class Deck {
 
 	}
 	
+	//********************************/* Private classes for all the Suites */********************************//
+
+	
 	// Hearts
 		private class Hearts{
 			private String [] heartsSuits;
