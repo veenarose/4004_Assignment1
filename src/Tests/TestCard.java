@@ -1,3 +1,4 @@
+package Tests;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -5,7 +6,8 @@ import org.junit.Test;
 public class TestCard {
 
 	@Test
-	public void test() {
+	public void testDuplicateCards() {
+		System.out.println("");
 		fail("Not yet implemented");
 	}
 
