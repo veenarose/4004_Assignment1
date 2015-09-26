@@ -4,11 +4,11 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class TestCard {
-
+	
 	@Test
-	public void testDuplicateCards() {
-		System.out.println("");
-		fail("Not yet implemented");
+	public void testNumberOfCardsInDeck(){
+		Deck deck = new Deck();
+		assertTrue("This deck may not have all the cards in it !!",deck.cards.length == 52); 		
 	}
 
 }
