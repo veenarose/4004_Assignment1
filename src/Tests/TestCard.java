@@ -67,7 +67,6 @@ public class TestCard {
 		assertTrue("Number of King in the deck is not 4 ", king == 4);
 	}
 
-
 	@Test
 	public void testInvalidCardsInDeck(){
 		// You can change the names of the invalid cards here
@@ -77,7 +76,7 @@ public class TestCard {
 		String invalidCardName4 = "ThDiamonds";
 
 		for(int i = 0 ; i < deck.cards.length ; i++){
-			assertTrue("The deck contains invalid card names!!",((deck.cards[i].contains(invalidCardName1) || deck.cards[i].contains(invalidCardName2)
+			assertTrue("The deck contains invalid card names!!",!((deck.cards[i].contains(invalidCardName1)|| deck.cards[i].contains(invalidCardName2)
 					||deck.cards[i].contains(invalidCardName3)|| deck.cards[i].contains(invalidCardName4))));					
 		}		
 	}
