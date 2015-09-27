@@ -4,12 +4,14 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import Poker_Game.Deck;
+import Poker_Game.Hands;
 import Poker_Game.Players;
 import Poker_Game.PokerGame;
 
 public class TestCard {
 	Deck deck = new Deck();
 	PokerGame game;
+	Hands hand;
 
 	@Test
 	public void testNumberOfCardsInDeck(){
@@ -48,7 +50,7 @@ public class TestCard {
 		assertTrue("Number of Diamonds in the deck is not 13 ", diamonds == 13);
 		assertTrue("Number of Hearts in the deck is not 13 ", hearts == 13);
 		assertTrue("Number of Clubs in the deck is not 13 ", clubs == 13);
-		
+
 		// Check for ranks
 		assertTrue("Number of Ace in the deck is not 4 ", ace == 4);
 		assertTrue("Number of Two in the deck is not 4 ", two == 4);
@@ -64,7 +66,7 @@ public class TestCard {
 		assertTrue("Number of Queen in the deck is not 4 ", queen == 4);
 		assertTrue("Number of King in the deck is not 4 ", king == 4);
 	}
-	
+
 	@Test //( This test must fail )
 	public void testMinimumPlayers() throws Exception{
 		game = new PokerGame(-2);
@@ -74,9 +76,10 @@ public class TestCard {
 	public void testMaximumPlayers() throws Exception{
 		game = new PokerGame(7);
 	}
-	
+
 	@Test
 	public void testNumberOfHandsDealt(){
-		
+		hand = new Hands();
+		assertTrue("This hand may not have 5 cards ", hand.hands.length == 5); 		
 	}
 }
