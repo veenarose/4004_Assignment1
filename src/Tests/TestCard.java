@@ -8,8 +8,6 @@ import Poker_Game.Deck;
 public class TestCard {
 	Deck deck = new Deck();
 
-
-
 	@Test
 	public void testNumberOfCardsInDeck(){
 		assertTrue("This deck may not have all the cards in it !!",deck.cards.length == 52); 		
@@ -62,5 +60,10 @@ public class TestCard {
 		assertTrue("Number of Jack in the deck is not 4 ", jack == 4);
 		assertTrue("Number of Queen in the deck is not 4 ", queen == 4);
 		assertTrue("Number of King in the deck is not 4 ", king == 4);
+	}
+	
+	@Test
+	public void testMinimumPlayers(){
+		
 	}
 }
