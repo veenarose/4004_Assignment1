@@ -74,4 +74,9 @@ public class TestCard {
 	public void testMaximumPlayers() throws Exception{
 		game = new PokerGame(7);
 	}
+	
+	@Test
+	public void testNumberOfHandsDealt(){
+		
+	}
 }
