@@ -1,6 +1,8 @@
 package Poker_Game;
+import java.util.Random;
 
 public class Deck {
+
 	public String [] cards;	
 
 	public Deck(){
@@ -31,6 +33,44 @@ public class Deck {
 		}		
 	}
 
+	/* Shuffles the contents of a current deck
+	 * 
+	 */
+	public void shuffleDeck (){
+		//TODO: Not yet implemented
+		int[] shuffleInt = new int [52];
+		String[] tempDeck = new String[52];
+
+		for(int i = 0 ; i <shuffleInt.length; i++){
+			shuffleInt[i]= i;
+			tempDeck[i] = this.cards[i];
+		}
+		shuffleArray(shuffleInt);
+
+		// Now shuffle the cards the according to the new shuffled integer array
+		for(int j = 0 ; j <tempDeck.length; j++){
+			this.cards[j] = tempDeck[shuffleInt[j]];
+		}
+
+		// Clean out unused variables.
+		tempDeck = null;
+		shuffleInt = null;
+	}
+
+	/* An array of integers is shuffled 
+	 * Implementing Fisher–Yates shuffle
+	 */
+	private  void shuffleArray(int[] ar){
+		Random rnd = new Random();
+		for (int i = ar.length - 1; i > 0; i--){
+			int index = rnd.nextInt(i + 1);
+			// Simple swap
+			int a = ar[index];
+			ar[index] = ar[i];
+			ar[i] = a;
+		}
+	}
+
 	/* Prints out all the contents of the current object of cards in an order 
 	 * 
 	 */
@@ -39,7 +79,6 @@ public class Deck {
 			System.out.println("Card is :" +cards[i] +"counter: "+i);			
 		}
 	}
-
 
 
 	//********************************/* Private classes for all the Suites */********************************//
@@ -127,5 +166,15 @@ public class Deck {
 			clubsSuits[11] = "QueenClubs";
 			clubsSuits[12] = "KingClubs";					
 		}
+	}
+
+	/* Main Method
+	 * 
+	 */
+	public static void main(String [] args){
+		Deck deck = new Deck();
+		deck.printCards();
+		deck.shuffleDeck();
+		deck.printCards();
 	}
 }
