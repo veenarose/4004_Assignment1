@@ -4,9 +4,12 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import Poker_Game.Deck;
+import Poker_Game.Players;
+import Poker_Game.PokerGame;
 
 public class TestCard {
 	Deck deck = new Deck();
+	PokerGame game;
 
 	@Test
 	public void testNumberOfCardsInDeck(){
@@ -64,6 +67,11 @@ public class TestCard {
 	
 	@Test
 	public void testMinimumPlayers(){
-		
+		game = new PokerGame(-2);
+	}
+
+	@Test
+	public void testMaximumPlayers(){
+		game = new PokerGame(7);
 	}
 }

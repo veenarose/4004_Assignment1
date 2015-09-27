@@ -15,7 +15,7 @@ public class Players {
 		this.flush = null;
 	}
 	
-	Players(int id){
+	public Players(int id){
 		this.playerID = id;
 		this.playerHand = new Hands();
 		this.flush = null;
