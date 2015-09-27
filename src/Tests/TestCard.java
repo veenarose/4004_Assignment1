@@ -65,13 +65,13 @@ public class TestCard {
 		assertTrue("Number of King in the deck is not 4 ", king == 4);
 	}
 	
-	@Test
-	public void testMinimumPlayers(){
+	@Test //( This test must fail )
+	public void testMinimumPlayers() throws Exception{
 		game = new PokerGame(-2);
 	}
 
-	@Test
-	public void testMaximumPlayers(){
+	@Test //( This test must fail )
+	public void testMaximumPlayers() throws Exception{
 		game = new PokerGame(7);
 	}
 }

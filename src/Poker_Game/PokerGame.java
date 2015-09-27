@@ -8,7 +8,10 @@ public class PokerGame {
 	public Deck deckOfCards;
 
 	// Constructor
-	PokerGame(int players){
+	public PokerGame(int players) throws Exception{
+		if (players < 2 || players > 5){
+		       throw new Exception("Invalid number of players, there can only be 2-4 players");
+		}
 		this.numberOfPlayers = players;
 		this.deckOfCards = new Deck();
 		this.players = new Players[this.numberOfPlayers];
