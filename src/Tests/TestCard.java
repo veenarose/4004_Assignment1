@@ -67,6 +67,21 @@ public class TestCard {
 		assertTrue("Number of King in the deck is not 4 ", king == 4);
 	}
 
+
+	@Test
+	public void testInvalidCardsInDeck(){
+		// You can change the names of the invalid cards here
+		String invalidCardName1 = "FourteenCubs";
+		String invalidCardName2 = "ThreeShovels";
+		String invalidCardName3 = "TwoCubes";
+		String invalidCardName4 = "ThDiamonds";
+
+		for(int i = 0 ; i < deck.cards.length ; i++){
+			assertTrue("The deck contains invalid card names!!",((deck.cards[i].contains(invalidCardName1) || deck.cards[i].contains(invalidCardName2)
+					||deck.cards[i].contains(invalidCardName3)|| deck.cards[i].contains(invalidCardName4))));					
+		}		
+	}
+
 	@Test //( This test must fail )
 	public void testMinimumPlayers() throws Exception{
 		game = new PokerGame(-2);
@@ -82,4 +97,5 @@ public class TestCard {
 		hand = new Hands();
 		assertTrue("This hand may not have 5 cards ", hand.hands.length == 5); 		
 	}
+
 }
