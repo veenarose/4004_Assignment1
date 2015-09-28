@@ -23,7 +23,7 @@ public class Players {
 	
 	public void printPlayerHand(){
 		System.out.println("Player " +this.playerID +" Hand :");
-		//this.playerHand.printHands();
+		this.playerHand.printHands();
 	}
 }
 

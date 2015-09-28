@@ -105,9 +105,19 @@ public class TestCard {
 		assertTrue("The third player Id is wrong", game.players[2].playerID == 3);
 
 	}
-	
+
 	@Test
 	public void testHandsAreRanked(){
-		
+
+	}
+
+	@Test
+	public void testOrderOfEntry(){
+
+	}
+
+	@Test
+	public void chechDupeHands(){
+
 	}
 }
