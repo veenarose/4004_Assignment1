@@ -96,10 +96,18 @@ public class TestCard {
 		hand = new Hands();
 		assertTrue("This hand may not have 5 cards ", hand.hands.length == 5); 		
 	}
+
+	@Test
+	public void testPlayerIdCheck() throws Exception{
+		game = new PokerGame(3);
+		assertTrue("The first player Id is wrong", game.players[0].playerID == 1);
+		assertTrue("The second player Id is wrong", game.players[1].playerID == 2);
+		assertTrue("The third player Id is wrong", game.players[2].playerID == 3);
+
+	}
 	
 	@Test
 	public void testHandsAreRanked(){
 		
 	}
-
 }
