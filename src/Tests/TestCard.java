@@ -107,8 +107,10 @@ public class TestCard {
 	}
 
 	@Test
-	public void testHandsAreRanked(){
-
+	public void testHandsAreRanked() throws Exception{
+		game = new PokerGame(2);
+		game.setHandsManually(1, "TwoHearts", "FourSpades", "QueenDiamonds", "SevenClubs", "KingClubs");
+		
 	}
 
 	@Test

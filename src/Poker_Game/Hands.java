@@ -66,9 +66,11 @@ public class Hands {
 	private void setHandsInOrder(){
 		Integer [] sortedRank = new Integer[5];
 		String[] tempHand = new String[5];
+		int[] tempRankHand = new int[5];
 		for(int i = 0 ; i< this.handRank.length; i++ ){
 			sortedRank[i] = this.handRank[i];
 			tempHand[i] = this.hands[i];
+			tempRankHand[i]= this.handRank[i];
 		}
 
 
@@ -83,14 +85,17 @@ public class Hands {
 
 		for(int i = 0; i <sortedRank.length; i++){
 			for(int j = 0; j < this.handRank.length; j++){
-				if(sortedRank[i].equals(this.handRank[j])){
+				if(sortedRank[i].equals(tempRankHand[j])){
 					this.hands[i] = tempHand[j];
+					this.handRank[i] = tempRankHand[j];
 				}
 			}
 		}
 	}
 
-
+	/*
+	 * Prints an array of Integers
+	 */
 	public void printArray(Integer[] array){
 		for(int i = 0;i <array.length; i++){
 			System.out.print(array[i]+",");
