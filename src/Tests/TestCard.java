@@ -116,8 +116,8 @@ public class TestCard {
 			arr[i] = game.players[1].playerHand.handRank[i];
 		}
 
+		// Check if rank array is sorted every time you insert an hand 
 		boolean sorted = true;
-
 		for (int i = 0; i < arr.length - 1; i++) {
 			if (arr[i] > arr[i+1]) {
 				sorted = false;
@@ -125,16 +125,20 @@ public class TestCard {
 			}
 		}
 		assertTrue("The Hand rank array that represents the rank for hands in integers are not ranked or sorted", sorted);
-
+		game.players[1].printPlayerHand();
 	}
 
 	@Test
-	public void testOrderOfEntry(){
-
+	public void testOrderOfEntry() throws Exception{
+		game = new PokerGame(2);
+		game.setHandsManually(1, "TwoHearts", "FourSpades", "QueenDiamonds", "SevenClubs", "KingClubs");
 	}
 
 	@Test
-	public void chechDupeHands(){
-
+	public void chechDupeHands() throws Exception{
+		game = new PokerGame(2);
+		game.setAutoHandsForPlayers();
+		
+		game.players[0].playerHand.findHandRank();
 	}
 }

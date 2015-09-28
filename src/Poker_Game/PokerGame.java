@@ -24,11 +24,13 @@ public class PokerGame {
 	 * Set Hands Manually
 	 */
 	public void setHandsManually(int playerId, String card1,String card2,String card3,String card4,String card5){
-		this.players[playerId].playerHand.hands[0]= card1;
-		this.players[playerId].playerHand.hands[1]= card2;
-		this.players[playerId].playerHand.hands[2]= card3;
-		this.players[playerId].playerHand.hands[3]= card4;
-		this.players[playerId].playerHand.hands[4]= card5;
+		Hands playerHand = new Hands();
+		playerHand.hands[0] = card1;
+		playerHand.hands[1] = card2;
+		playerHand.hands[2] = card3;
+		playerHand.hands[3] = card4;
+		playerHand.hands[4] = card5;
+		this.players[playerId].playerHand.setHands(playerHand);
 	}
 
 	/* Sets a hand of 5 for each players 
