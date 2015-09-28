@@ -8,7 +8,7 @@ public class Hands {
 	public String[] hands;
 	public int ace, two , three, four, five, six, seven, eight, nine, ten, jack, queen, king;
 	public int hearts, diamonds, spade, clubs;
-	private Integer[] handRank;
+	public Integer[] handRank;
 
 
 	// Constructor

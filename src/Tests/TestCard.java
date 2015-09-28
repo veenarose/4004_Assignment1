@@ -110,7 +110,22 @@ public class TestCard {
 	public void testHandsAreRanked() throws Exception{
 		game = new PokerGame(2);
 		game.setHandsManually(1, "TwoHearts", "FourSpades", "QueenDiamonds", "SevenClubs", "KingClubs");
-		
+
+		int[] arr = new int[5];
+		for(int i = 0 ; i < arr.length; i++){
+			arr[i] = game.players[1].playerHand.handRank[i];
+		}
+
+		boolean sorted = true;
+
+		for (int i = 0; i < arr.length - 1; i++) {
+			if (arr[i] > arr[i+1]) {
+				sorted = false;
+				break;
+			}
+		}
+		assertTrue("The Hand rank array that represents the rank for hands in integers are not ranked or sorted", sorted);
+
 	}
 
 	@Test
