@@ -96,5 +96,10 @@ public class TestCard {
 		hand = new Hands();
 		assertTrue("This hand may not have 5 cards ", hand.hands.length == 5); 		
 	}
+	
+	@Test
+	public void testHandsAreRanked(){
+		
+	}
 
 }
